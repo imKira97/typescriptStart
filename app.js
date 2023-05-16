@@ -7,6 +7,12 @@ const buttonEle = document.querySelector('button');
 const numArr = [];
 const strArr = [];
 const anyArr = [];
+//generics type is a type that interacts with another type 
+/*
+ for e.g array- array itself is a datatype i.e list of numbers
+ but it interacts with another type i.e the type of data that is stored inside of the array
+*/
+const numGenrics = [];
 function add1(num1, num2) {
     if (typeof num1 === 'number' && typeof num2 === 'number') {
         return num1 + num2;
@@ -41,3 +47,13 @@ buttonEle.addEventListener('click', () => {
     console.log(strArr);
 });
 //console.log(add('1','5'));  //here we will get compile type error
+//Promise is also type of generics - because it reolve the value and this type can be of different type
+//here resolve is string type
+const mypromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('it worked');
+    }, 1000);
+});
+mypromise.then((result) => {
+    console.log(result.split(' '));
+});
