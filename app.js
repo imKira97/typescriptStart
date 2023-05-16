@@ -7,10 +7,6 @@ const buttonEle = document.querySelector('button');
 const numArr = [];
 const strArr = [];
 const anyArr = [];
-//number - for integer ,float ,double
-//string - for text 
-//any- for any kind of datatype
-// | - union combine e.g (number|string - this will accept both)
 function add1(num1, num2) {
     if (typeof num1 === 'number' && typeof num2 === 'number') {
         return num1 + num2;

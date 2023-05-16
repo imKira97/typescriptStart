@@ -14,7 +14,14 @@ const anyArr=[];
 //any- for any kind of datatype
 // | - union combine e.g (number|string - this will accept both)
 
-function add1(num1:number | string, num2:number | string){
+
+//type keyword is use as alias when we do union of two type 
+type stringOrNumber=number|string;
+//above we have given number|string union type a name and we can directly use that name instead od writing num|str union
+//same can be done for object as well
+type ResultObj={val:number;time:Date}
+
+function add1(num1:stringOrNumber, num2:stringOrNumber){
     if(typeof num1==='number' && typeof num2 ==='number'){
         return num1+num2;
     }
@@ -29,7 +36,7 @@ function add1(num1:number | string, num2:number | string){
 }
 
 //object type - {} inside bracket we are structuring our object type
-function objectResult(obj:{val:number,time:Date}){
+function objectResult(obj:ResultObj){
     console.log(obj.val);
     console.log(obj.time);
     
